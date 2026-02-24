@@ -1,0 +1,12 @@
+[submodule "services/val-content-engine"]
+	path = services/val-content-engine
+	url = https://github.com/HaleBradley/Video-processing-engine-Val-AI-Content.git
+[submodule "services/music-analyzer"]
+	path = services/music-analyzer
+	url = https://github.com/HaleBradley/Music-Analyzer-Val-AI-Content.git
+[submodule "services/montage-planner"]
+	path = services/montage-planner
+	url = https://github.com/HaleBradley/Montage-Planner-AI-Engine.git
+[submodule "services/render-engine"]
+	path = services/render-engine
+	url = https://github.com/HaleBradley/Render-Engine-AI-content.git
