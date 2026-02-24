@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MusicAnalysis",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "song",
+    "song_duration",
+    "tempo",
+    "beat_count",
+    "beats",
+    "beat_strength",
+    "drop_sections"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "song": { "type": "string" },
+    "song_duration": { "type": "number" },
+    "tempo": { "type": "number" },
+    "beat_count": { "type": "integer" },
+    "beats": { "type": "array", "items": { "type": "number" } },
+    "beat_strength": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["time", "strength"],
+        "properties": {
+          "time": { "type": "number" },
+          "strength": { "type": "number" }
+        }
+      }
+    },
+    "drop_sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start", "end"],
+        "properties": {
+          "start": { "type": "number" },
+          "end": { "type": "number" },
+          "energy_score": { "type": "number" }
+        }
+      }
+    }
+  }
+}

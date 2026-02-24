@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TimelinePlan",
+  "type": "object",
+  "required": ["schema_version", "timeline", "total_duration"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "total_duration": { "type": "number" },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["clip_id", "clip_start", "clip_end", "song_start", "song_end"],
+        "properties": {
+          "clip_id": { "type": "string" },
+          "clip_start": { "type": "number" },
+          "clip_end": { "type": "number" },
+          "song_start": { "type": "number" },
+          "song_end": { "type": "number" }
+        }
+      }
+    }
+  }
+}

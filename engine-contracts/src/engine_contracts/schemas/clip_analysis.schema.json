@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClipAnalysisList",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "schema_version",
+      "clip_id",
+      "duration",
+      "intensity_segments"
+    ],
+    "properties": {
+      "schema_version": { "type": "string" },
+      "clip_id": { "type": "string" },
+      "duration": { "type": "number" },
+      "intensity_segments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["start", "end", "intensity_score", "spike_count", "cluster_density"],
+          "properties": {
+            "start": { "type": "number" },
+            "end": { "type": "number" },
+            "intensity_score": { "type": "number" },
+            "spike_count": { "type": "integer" },
+            "cluster_density": { "type": "number" },
+            "ding_hit_count": { "type": "integer" },
+            "max_ding_confidence": { "type": "number" }
+          }
+        }
+      }
+    }
+  }
+}
